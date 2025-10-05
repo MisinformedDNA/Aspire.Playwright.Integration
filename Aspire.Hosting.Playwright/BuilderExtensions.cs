@@ -84,7 +84,7 @@ public static class BuilderExtensions
 	/// using the specified hostname alias. 'host.docker.internal' is Docker's standard
 	/// hostname for accessing the host machine from containers.
 	/// </remarks>
-	internal static IResourceBuilder<PlaywrightResource> WithHostNetworkAccess(this IResourceBuilder<PlaywrightResource> builder, string hostAlias = "host.docker.internal")
+	public static IResourceBuilder<PlaywrightResource> WithHostNetworkAccess(this IResourceBuilder<PlaywrightResource> builder, string hostAlias = "host.docker.internal")
 	{
 		ArgumentNullException.ThrowIfNull(builder, nameof(builder));
 
